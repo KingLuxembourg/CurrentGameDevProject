@@ -1,31 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Tile : MonoBehaviour
+public class Tile : MonoBehaviour//, IPointerEnterHandler, IPointerExitHandler
 {
-    //[SerializeField] private Color _BaseColor, _Offsetcolor;
-    //[SerializeField] private Material _materialBase, _materialOffset;
     [SerializeField] private GameObject _highlight;
-    Ray ray;
-    RaycastHit hit;
-    bool willhighlight;
-    public void yeshighlight(bool isOffset = false)
-    {
-        willhighlight = isOffset;
-        _highlight.SetActive(false);
 
-    }
-    public void nohighlight(bool isOffset = true)
-    {
-        willhighlight = isOffset;
-        _highlight.SetActive(true);
+    //bool willhighlight;
+    // public void yeshighlight(bool isOffset = false)
+    // {
+    // willhighlight = isOffset;
+    //_highlight.SetActive(false);
 
+    //}
+    private void OnMouseEnter()
+    {
+        Debug.Log("work");
     }
 
-    private void Start()
-    {
-        
-    }
+    //public void OnPointerEnter(PointerEventData eventData)
+    //{
 
+
+    //}
+
+    //public void OnPointerExit(PointerEventData eventData)
+    //{
+
+    //}
 }
