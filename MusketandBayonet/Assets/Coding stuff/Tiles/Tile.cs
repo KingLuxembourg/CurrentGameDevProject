@@ -12,21 +12,15 @@ public class Tile : MonoBehaviour//, IPointerEnterHandler, IPointerExitHandler
     // {
     // willhighlight = isOffset;
     //_highlight.SetActive(false);
-
     //}
     private void OnMouseEnter()
     {
+        _highlight.SetActive(true);
         Debug.Log("work");
     }
-
-    //public void OnPointerEnter(PointerEventData eventData)
-    //{
-
-
-    //}
-
-    //public void OnPointerExit(PointerEventData eventData)
-    //{
-
-    //}
+    private void OnMouseExit()
+    {
+        Debug.Log("yes");
+        _highlight.SetActive(false);
+    }
 }
